@@ -87,35 +87,46 @@ def depthFirstSearch(problem):
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
     "*** YOUR CODE HERE ***"
-
+    ##################
+    # define a stack to get fringes and push the first node
     open = util.Stack()
-    open.push(problem.getStartState())
+    open.push((problem.getStartState(), []))
+    # difine closed list for dead nodes
     closed = []
+    closed.append(problem.getStartState())
+    ###################
 
     while open.isEmpty() is not True:
+        cState, cAction = open.pop()
+        # nextline :  it means that we add state to dead items and expand the childrens of this node
+        closed.append(cState)
+        for child in problem.getSuccessors(cState):
+            # state of the child
+            ch_state = child[0]
+            # children direction
+            ch_direction = child[1]
+            # check the child states (NOT repeated)
+            if ch_state not in closed:
+                # if : GOAL OR NOT
+                if problem.isGoalState(ch_state):
 
-        current = open.pop()
-        if problem.isGoalState(current):
-            break
-        else:
-            children = problem.getSuccessors(current)
-            closed.append(current)
-            for ch in children:
-                if util.manhattanDistance(ch[0], current) == 0:
-                    continue
-                open.push(ch[0])
-
-
-
-
-
-
+                    return cAction +[ch_direction]
+                else:
+                    # add child of this node in fringe and closed this node
+                    open.push((ch_state, cAction + [ch_direction]))
+                    closed.append(ch_state)
     return ["West"]
     util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
+    # open1 = util.Queue()
+    # open1.push((problem.getStartState, []))
+    # closed1 = []
+    # closed1.append(problem.getStartState)
+    #
+
     util.raiseNotDefined()
 
 def uniformCostSearch(problem):
