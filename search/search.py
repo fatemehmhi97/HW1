@@ -87,36 +87,36 @@ def depthFirstSearch(problem):
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
     "*** YOUR CODE HERE ***"
-    #################
-    # define a stack to get fringes and push the first node
-    # open = util.Stack()
-    # open.push((problem.getStartState(), []))
-    # # difine closed list for dead nodes
-    # closed = []
-    # closed.append(problem.getStartState())
-    # ###################
-    #
-    # while open.isEmpty() is not True:
-    #     cState, cAction = open.pop()
-    #     # nextline :  it means that we add state to dead items and expand the childrens of this node
-    #     closed.append(cState)
-    #     for child in problem.getSuccessors(cState):
-    #         # state of the child
-    #         ch_state = child[0]
-    #         # children direction
-    #         ch_direction = child[1]
-    #         # check the child states (NOT repeated)
-    #         if ch_state not in closed:
-    #             # if : GOAL OR NOT
-    #             if problem.isGoalState(ch_state):
-    #
-    #                 return cAction +[ch_direction]
-    #             else:
-    #                 # add child of this node in fringe and closed this node
-    #                 open.push((ch_state, cAction + [ch_direction]))
-    #                 closed.append(ch_state)
-    # return ["West"]
-    # util.raiseNotDefined()
+    ################
+    #define a stack to get fringes and push the first node
+    open = util.Stack()
+    open.push((problem.getStartState(), []))
+    # difine closed list for dead nodes
+    closed = []
+    closed.append(problem.getStartState())
+    ###################
+
+    while open.isEmpty() is not True:
+        cState, cAction = open.pop()
+        # nextline :  it means that we add state to dead items and expand the childrens of this node
+        closed.append(cState)
+        for child in problem.getSuccessors(cState):
+            # state of the child
+            ch_state = child[0]
+            # children direction
+            ch_direction = child[1]
+            # check the child states (NOT repeated) not parent of this child
+            if ch_state not in closed:
+                # if : GOAL OR NOT
+                if problem.isGoalState(ch_state):
+
+                    return cAction + [ch_direction]
+                else:
+                    # add child of this node in fringe and closed this node
+                    open.push((ch_state, cAction + [ch_direction]))
+                    closed.append(ch_state)
+    return ["West"]
+    util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
@@ -144,6 +144,31 @@ def breadthFirstSearch(problem):
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
     "*** YOUR CODE HERE ***"
+    open = util.PriorityQueue()
+    pathcost = 0
+    open.push((problem.getStartState,[]), pathcost)
+    closed = []
+    closed.append((problem.getStartState(),[]))
+    while open.isEmpty() is not True:
+        cState, cAction = open.pop()
+        # if : GOAL OR NOT
+        if problem.isGoalState(ch_state):
+            return cAction
+            closed.append(cState)
+
+        # state of the child
+        ch_state = child[0]
+        # children direction
+        ch_direction = child[1]
+        # check the child states (NOT repeated) not parent of this child
+        if ch_state not in closed or open:
+            open.push((ch_state, cAction + [ch_direction]))
+        # i have to define an else if block to  show : child.STATE is in frontier with higher PATH-COST then
+        # replace that frontier node with child ****LIKE UCS PSUDOCODE ****
+
+
+
+
     util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
