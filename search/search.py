@@ -158,6 +158,14 @@ def uniformCostSearch(problem):
         else:
             open.push(item, priority)
 
+        open = util.PriorityQueue()
+        closed = []
+        open.push((problem.getStartState(), []), 0)
+        closed.append(problem.getStartState())
+
+        util.raiseNotDefined()
+
+
 def nullHeuristic(state, problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
