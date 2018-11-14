@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eb55fa1-946e-432d-91e9-73bbfc7ed190" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/search$search.coverage" NAME="search Coverage Results" MODIFIED="1542196802517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$search.coverage" NAME="search Coverage Results" MODIFIED="1542199959662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="85613882">
@@ -115,14 +114,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3098" />
-          <entry key="txt" value="612" />
+          <entry key="py" value="3109" />
+          <entry key="txt" value="629" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="612" />
-          <entry key="Python" value="3098" />
+          <entry key="PLAIN_TEXT" value="629" />
+          <entry key="Python" value="3109" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -134,11 +133,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
+            <state relative-caret-position="272">
+              <caret line="151" column="42" selection-start-line="151" selection-start-column="42" selection-end-line="151" selection-end-column="42" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#650#772#1" />
+                <element signature="e#6117#6291#0" />
+                <element signature="e#6347#7681#0" />
               </folding>
             </state>
           </provider>
@@ -156,14 +157,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searchAgents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="267" column="43" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
+            <state relative-caret-position="323">
+              <caret line="129" column="33" lean-forward="true" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#661#1351#1" />
                 <element signature="e#1498#1782#0" />
                 <element signature="e#1784#1839#0" />
-                <element signature="e#2039#5353#0" />
                 <element signature="e#5410#8911#0" />
                 <element signature="e#7197#8316#0" />
                 <element signature="e#8367#8911#0" />
@@ -475,7 +475,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542198281129</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="check : state is goal or not and if state is not in closed add state in closed.">
+      <created>1542198652398</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542198652398</updated>
+    </task>
+    <task id="LOCAL-00010" summary="expand childrens">
+      <created>1542199384512</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542199384512</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -521,7 +535,8 @@
     <MESSAGE value="define an update for checking new atem with fringe" />
     <MESSAGE value="define openlist with priorityQueue... define closedlist" />
     <MESSAGE value="check : state is goal or not and if state is not in closed add state in closed." />
-    <option name="LAST_COMMIT_MESSAGE" value="check : state is goal or not and if state is not in closed add state in closed." />
+    <MESSAGE value="expand childrens" />
+    <option name="LAST_COMMIT_MESSAGE" value="expand childrens" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ghostAgents.py">
@@ -535,41 +550,6 @@
     <entry file="file://$PROJECT_DIR$/eightpuzzle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1071" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searchAgents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="267" column="43" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
-          <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#661#1351#1" />
-            <element signature="e#1498#1782#0" />
-            <element signature="e#1784#1839#0" />
-            <element signature="e#2039#5353#0" />
-            <element signature="e#5410#8911#0" />
-            <element signature="e#7197#8316#0" />
-            <element signature="e#8367#8911#0" />
-            <element signature="e#8957#9378#0" />
-            <element signature="e#9424#9821#0" />
-            <element signature="e#9879#10038#0" />
-            <element signature="e#10096#10270#0" />
-            <element signature="e#10272#10325#0" />
-            <element signature="e#10483#13380#0" />
-            <element signature="e#13425#14077#0" />
-            <element signature="e#14121#14341#0" />
-            <element signature="e#14372#16433#0" />
-            <element signature="e#14372#14751#1" />
-            <element signature="e#15153#15170#0" />
-            <element signature="e#15214#15242#0" />
-            <element signature="e#15953#16433#0" />
-            <element signature="e#16480#16700#0" />
-            <element signature="e#16741#18086#0" />
-            <element signature="e#18134#19390#0" />
-            <element signature="e#19447#20703#0" />
-            <element signature="e#20754#21433#0" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
@@ -667,13 +647,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/searchAgents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="129" column="33" lean-forward="true" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#661#1351#1" />
+            <element signature="e#1498#1782#0" />
+            <element signature="e#1784#1839#0" />
+            <element signature="e#5410#8911#0" />
+            <element signature="e#7197#8316#0" />
+            <element signature="e#8367#8911#0" />
+            <element signature="e#8957#9378#0" />
+            <element signature="e#9424#9821#0" />
+            <element signature="e#9879#10038#0" />
+            <element signature="e#10096#10270#0" />
+            <element signature="e#10272#10325#0" />
+            <element signature="e#10483#13380#0" />
+            <element signature="e#13425#14077#0" />
+            <element signature="e#14121#14341#0" />
+            <element signature="e#14372#16433#0" />
+            <element signature="e#14372#14751#1" />
+            <element signature="e#15153#15170#0" />
+            <element signature="e#15214#15242#0" />
+            <element signature="e#15953#16433#0" />
+            <element signature="e#16480#16700#0" />
+            <element signature="e#16741#18086#0" />
+            <element signature="e#18134#19390#0" />
+            <element signature="e#19447#20703#0" />
+            <element signature="e#20754#21433#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
+        <state relative-caret-position="272">
+          <caret line="151" column="42" selection-start-line="151" selection-start-column="42" selection-end-line="151" selection-end-column="42" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#650#772#1" />
+            <element signature="e#6117#6291#0" />
+            <element signature="e#6347#7681#0" />
           </folding>
         </state>
       </provider>

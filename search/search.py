@@ -158,29 +158,27 @@ def uniformCostSearch(problem):
         else:
             open.push(item, priority)
 
-        open = util.PriorityQueue()
-        closed = []
-        open.push((problem.getStartState(), []), 0)
-        closed.append(problem.getStartState())
+    open = util.PriorityQueue()
+    closed = []
+    open.push((problem.getStartState(), []), 0)
+    closed.append(problem.getStartState())
 
-        while open.isEmpty() == 0:
-            state, actions = open.pop()
+    while open.isEmpty() == 0:
+        state, actions = open.pop()
 
-            if problem.isGoalState(state):
-                return actions
+        if problem.isGoalState(state):
+            return actions
 
-            if state not in closed:
-                closed.append(state)
+        if state not in closed:
+            closed.append(state)
 
-            for child in problem.getSuccessors(state):
-                ch_state = child[0]
-                ch_direction = child[1]
-                if ch_state not in closed:
-                    _update(open, (ch_state, actions + [ch_direction]),
-                            problem.getCostOfActions(actions + [ch_direction]))
+        for child in problem.getSuccessors(state):
+            ch_state = child[0]
+            ch_direction = child[1]
+            if ch_state not in closed:
+                _update(open, (ch_state, actions + [ch_direction]), problem.getCostOfActions(actions + [ch_direction]))
 
-        util.raiseNotDefined()
-
+    util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
     """
