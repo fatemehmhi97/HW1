@@ -163,6 +163,16 @@ def uniformCostSearch(problem):
         open.push((problem.getStartState(), []), 0)
         closed.append(problem.getStartState())
 
+        while open.isEmpty() == 0:
+            state, actions = open.pop()
+
+            if problem.isGoalState(state):
+                return actions
+
+            if state not in closed:
+                closed.append(state)
+
+
         util.raiseNotDefined()
 
 
