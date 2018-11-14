@@ -172,6 +172,12 @@ def uniformCostSearch(problem):
             if state not in closed:
                 closed.append(state)
 
+            for child in problem.getSuccessors(state):
+                ch_state = child[0]
+                ch_direction = child[1]
+                if ch_state not in closed:
+                    _update(open, (ch_state, actions + [ch_direction]),
+                            problem.getCostOfActions(actions + [ch_direction]))
 
         util.raiseNotDefined()
 
