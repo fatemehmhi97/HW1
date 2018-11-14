@@ -18,6 +18,7 @@ Pacman agents (in searchAgents.py).
 """
 
 import util
+import heapq
 
 class SearchProblem:
     """
@@ -98,7 +99,7 @@ def depthFirstSearch(problem):
 
     while open.isEmpty() is not True:
         cState, cAction = open.pop()
-        # nextline :  it means that we add state to dead items and expand the childrens of this node
+        # childline :  it means that we add state to dead items and expand the childrens of this node
         closed.append(cState)
         for child in problem.getSuccessors(cState):
             # state of the child
@@ -144,32 +145,18 @@ def breadthFirstSearch(problem):
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
     "*** YOUR CODE HERE ***"
-    open = util.PriorityQueue()
-    pathcost = 0
-    open.push((problem.getStartState,[]), pathcost)
-    closed = []
-    closed.append((problem.getStartState(),[]))
-    while open.isEmpty() is not True:
-        cState, cAction = open.pop()
-        # if : GOAL OR NOT
-        if problem.isGoalState(ch_state):
-            return cAction
-            closed.append(cState)
 
-        # state of the child
-        ch_state = child[0]
-        # children direction
-        ch_direction = child[1]
-        # check the child states (NOT repeated) not parent of this child
-        if ch_state not in closed or open:
-            open.push((ch_state, cAction + [ch_direction]))
-        # i have to define an else if block to  show : child.STATE is in frontier with higher PATH-COST then
-        # replace that frontier node with child ****LIKE UCS PSUDOCODE ****
-
-
-
-
-    util.raiseNotDefined()
+    def _update(open, item, priority):
+        for index, (p, c, i) in enumerate(open.heap):
+            if i[0] == item[0]:
+                if p <= priority:
+                    break
+                del open.heap[index]
+                open.heap.append((priority, c, item))
+                heapq.heapify(open.heap)
+                break
+        else:
+            open.push(item, priority)
 
 def nullHeuristic(state, problem=None):
     """
@@ -181,6 +168,7 @@ def nullHeuristic(state, problem=None):
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     "*** YOUR CODE HERE ***"
+
     util.raiseNotDefined()
 
 

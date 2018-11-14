@@ -12,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/search$search.coverage" NAME="search Coverage Results" MODIFIED="1541584468887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$search.coverage" NAME="search Coverage Results" MODIFIED="1542196802517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="85613882">
@@ -92,12 +92,13 @@
     <session id="-744265970">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -114,14 +115,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2906" />
-          <entry key="txt" value="274" />
+          <entry key="py" value="3091" />
+          <entry key="txt" value="344" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="274" />
-          <entry key="Python" value="2906" />
+          <entry key="PLAIN_TEXT" value="344" />
+          <entry key="Python" value="3091" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -133,22 +134,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="163" column="42" lean-forward="true" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
+            <state relative-caret-position="323">
+              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#650#772#1" />
-                <element signature="e#812#2063#0" />
-                <element signature="e#1080#1182#0" />
-                <element signature="e#1226#1372#0" />
-                <element signature="e#1418#1787#0" />
-                <element signature="e#1838#2063#0" />
-                <element signature="e#2099#2376#0" />
-                <element signature="e#2413#4160#0" />
-                <element signature="e#2989#3005#0" />
-                <element signature="e#4199#4902#0" />
-                <element signature="e#5110#5284#0" />
-                <element signature="e#5341#5473#0" />
               </folding>
             </state>
           </provider>
@@ -157,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="306">
+              <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -203,7 +193,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-579">
+            <state relative-caret-position="238">
               <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" />
@@ -248,7 +238,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="612">
               <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
               <folding>
                 <element signature="e#1205#1728#0" />
@@ -314,7 +304,15 @@
       <find>raiseNotDefined</find>
       <find>get</find>
       <find>raise</find>
+      <find>heap</find>
     </findStrings>
+    <replaceStrings>
+      <replace>ch_state</replace>
+      <replace>cState</replace>
+      <replace>caction</replace>
+      <replace>open</replace>
+      <replace>child</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -456,18 +454,25 @@
       <option name="project" value="LOCAL" />
       <updated>1541169903482</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="I try to write UCS code from book suggestions">
+      <created>1541587947104</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541587947105</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17919463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32765958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -477,7 +482,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29929078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -498,7 +503,8 @@
     <MESSAGE value="1. producing children of DFS graph" />
     <MESSAGE value="2.implement DFS code with line by line explanation" />
     <MESSAGE value="BFS is run..but without optimization :|" />
-    <option name="LAST_COMMIT_MESSAGE" value="BFS is run..but without optimization :|" />
+    <MESSAGE value="I try to write UCS code from book suggestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="I try to write UCS code from book suggestions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ghostAgents.py">
@@ -514,43 +520,44 @@
         <state relative-caret-position="-1071" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pacman.py">
+    <entry file="file://$PROJECT_DIR$/searchAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state relative-caret-position="408">
+          <caret line="267" column="43" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
           <folding>
             <element signature="n#!!doc" />
-            <element signature="e#650#1978#1" />
-            <element signature="e#2207#2258#0" />
-            <element signature="e#2385#8757#0" />
-            <element signature="e#2385#2944#1" />
-            <element signature="e#2950#3002#0" />
-            <element signature="e#9343#11137#0" />
-            <element signature="e#11162#13267#0" />
-            <element signature="e#13291#16572#0" />
-            <element signature="e#14167#14617#0" />
-            <element signature="e#16574#16603#0" />
-            <element signature="e#16687#16722#0" />
-            <element signature="e#16753#16979#0" />
-            <element signature="e#17010#22697#0" />
-            <element signature="e#22738#23705#0" />
-            <element signature="e#23755#24360#0" />
-            <element signature="e#24485#25937#0" />
-            <element signature="e#25970#26330#0" />
+            <element signature="e#661#1351#1" />
+            <element signature="e#1498#1782#0" />
+            <element signature="e#1784#1839#0" />
+            <element signature="e#2039#5353#0" />
+            <element signature="e#5410#8911#0" />
+            <element signature="e#7197#8316#0" />
+            <element signature="e#8367#8911#0" />
+            <element signature="e#8957#9378#0" />
+            <element signature="e#9424#9821#0" />
+            <element signature="e#9879#10038#0" />
+            <element signature="e#10096#10270#0" />
+            <element signature="e#10272#10325#0" />
+            <element signature="e#10483#13380#0" />
+            <element signature="e#13425#14077#0" />
+            <element signature="e#14121#14341#0" />
+            <element signature="e#14372#16433#0" />
+            <element signature="e#14372#14751#1" />
+            <element signature="e#15153#15170#0" />
+            <element signature="e#15214#15242#0" />
+            <element signature="e#15953#16433#0" />
+            <element signature="e#16480#16700#0" />
+            <element signature="e#16741#18086#0" />
+            <element signature="e#18134#19390#0" />
+            <element signature="e#19447#20703#0" />
+            <element signature="e#20754#21433#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-579">
+        <state relative-caret-position="238">
           <caret line="170" column="20" selection-start-line="170" selection-start-column="20" selection-end-line="170" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" />
@@ -593,7 +600,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="612">
           <caret line="161" column="7" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
           <folding>
             <element signature="e#1205#1728#0" />
@@ -609,59 +616,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searchAgents.py">
+    <entry file="file://$PROJECT_DIR$/pacman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="267" column="43" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
+        <state relative-caret-position="136">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
           <folding>
             <element signature="n#!!doc" />
-            <element signature="e#661#1351#1" />
-            <element signature="e#1498#1782#0" />
-            <element signature="e#1784#1839#0" />
-            <element signature="e#2039#5353#0" />
-            <element signature="e#5410#8911#0" />
-            <element signature="e#7197#8316#0" />
-            <element signature="e#8367#8911#0" />
-            <element signature="e#8957#9378#0" />
-            <element signature="e#9424#9821#0" />
-            <element signature="e#9879#10038#0" />
-            <element signature="e#10096#10270#0" />
-            <element signature="e#10272#10325#0" />
-            <element signature="e#10483#13380#0" />
-            <element signature="e#13425#14077#0" />
-            <element signature="e#14121#14341#0" />
-            <element signature="e#14372#16433#0" />
-            <element signature="e#14372#14751#1" />
-            <element signature="e#15153#15170#0" />
-            <element signature="e#15214#15242#0" />
-            <element signature="e#15953#16433#0" />
-            <element signature="e#16480#16700#0" />
-            <element signature="e#16741#18086#0" />
-            <element signature="e#18134#19390#0" />
-            <element signature="e#19447#20703#0" />
-            <element signature="e#20754#21433#0" />
+            <element signature="e#650#1978#1" />
+            <element signature="e#2207#2258#0" />
+            <element signature="e#2385#8757#0" />
+            <element signature="e#2385#2944#1" />
+            <element signature="e#2950#3002#0" />
+            <element signature="e#9343#11137#0" />
+            <element signature="e#11162#13267#0" />
+            <element signature="e#13291#16572#0" />
+            <element signature="e#14167#14617#0" />
+            <element signature="e#16574#16603#0" />
+            <element signature="e#16687#16722#0" />
+            <element signature="e#16753#16979#0" />
+            <element signature="e#17010#22697#0" />
+            <element signature="e#22738#23705#0" />
+            <element signature="e#23755#24360#0" />
+            <element signature="e#24485#25937#0" />
+            <element signature="e#25970#26330#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="163" column="42" lean-forward="true" selection-start-line="163" selection-start-column="42" selection-end-line="163" selection-end-column="42" />
+        <state relative-caret-position="323">
+          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
           <folding>
             <element signature="n#!!doc" />
             <element signature="e#650#772#1" />
-            <element signature="e#812#2063#0" />
-            <element signature="e#1080#1182#0" />
-            <element signature="e#1226#1372#0" />
-            <element signature="e#1418#1787#0" />
-            <element signature="e#1838#2063#0" />
-            <element signature="e#2099#2376#0" />
-            <element signature="e#2413#4160#0" />
-            <element signature="e#2989#3005#0" />
-            <element signature="e#4199#4902#0" />
-            <element signature="e#5110#5284#0" />
-            <element signature="e#5341#5473#0" />
           </folding>
         </state>
       </provider>
