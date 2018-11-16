@@ -191,9 +191,41 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     "*** YOUR CODE HERE ***"
 
+    def _update(open, item, priority):
+        for index, (p, c, i) in enumerate(open.heap):
+            if i[0] == item[0]:
+                if p <= priority:
+                    break
+                del open.heap[index]
+                open.heap.append((priority, c, item))
+                heapq.heapify(open.heap)
+                break
+        else:
+            open.push(item, priority)
+
+    open = util.PriorityQueue()
+    closed = []
+    open.push((problem.getStartState(), []), heuristic(problem.getStartState(), problem))
+    closed.append(problem.getStartState())
+
+    while open.isEmpty() == 0:
+        state, actions = open.pop()
+        # print state
+        if problem.isGoalState(state):
+            # print 'Find Goal'
+            return actions
+
+        if state not in closed:
+            closed.append(state)
+
+        for child in problem.getSuccessors(state):
+            ch_state = child[0]
+            ch_direction = child[1]
+            if ch_state not in closed:
+                _update(open, (ch_state, actions + [ch_direction]), \
+                        problem.getCostOfActions(actions + [ch_direction]) + heuristic(ch_state, problem))
+
     util.raiseNotDefined()
-
-
 # Abbreviations
 bfs = breadthFirstSearch
 dfs = depthFirstSearch
